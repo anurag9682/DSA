@@ -11,13 +11,13 @@ public:
 
         for (int i = 0; i < n; i++) {
             totalSum += nums[i];
-            currentValue +=  i * nums[i];
+            currentValue +=  i*nums[i];
         }
 
         int answer = currentValue;
 
         for (int k = 1; k < n; k++) {
-            currentValue = currentValue + totalSum -  n * nums[n - k];
+            currentValue = currentValue + totalSum -  n*nums[n - k];
             answer = max(answer, currentValue);
         }
 
